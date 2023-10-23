@@ -51,13 +51,7 @@ def show_predict_page():
     ok = st.button("Calculate Salary")
     if ok:
         X = np.array([[country, education, expericence ]])
-       # Check the shape of X
-        print(X.shape)
-        # Verify the data type of X[:, 0]
-        print(X[:, 0].dtype)
-
-        # Flatten X[:, 0] if needed
-        X[:, 0] = le_country.transform(X[:, 0].flatten())
+        X[:, 0] = le_country.transform(X[:,0])
         X[:, 1] = le_education.transform(X[:,1])
         X = X.astype(float)
 
