@@ -4,7 +4,7 @@ import numpy as np
 
 
 def load_model():
-    with open('salary_prediction.pkl', 'rb') as file:
+    with open('saved_steps.pkl', 'rb') as file:
         data = pickle.load(file)
     return data
 
@@ -38,8 +38,8 @@ def show_predict_page():
 
     education = (
         "Less than a Bachelors",
-        "Bachelor’s degree",
-        "Master’s degree",
+        "Bachelor's degree",
+        "Master's degree",
         "Post grad",
     )
 
